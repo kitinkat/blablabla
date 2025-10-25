@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+    
+    printf("Введите целое число больше 999: ");
+    scanf("%d", &number);
+    
+    if (number > 999) {
+        printf("Цифра в разряде сотен: %d\n", (number / 100) % 10);
+    } else {
+        printf("Число должно быть больше 999!\n");
+    }
+    
+    return 0;
+}}
