@@ -1,0 +1,18 @@
+name = ['Петров', 'Иванов', 'Сидоров', 'Козлов']
+predmet = ['Физкультура', 'Математика', 'Теория вероятности']
+ocenka = ['5', '4', '3', '2']
+data = ['1.03', '2.04', '3.05']
+filter_predmet = {'Математика', 'Физкультура'}
+filter_data = {'1.03', '3.05'}
+used_ocenka = set()
+for a in name:
+  for b in predmet:
+    for c in data:
+      if b in filter_predmet and c in filter_data:
+        o = ''
+        for d in ocenka:
+          if d not in used_ocenka:
+            o = d
+            used_ocenka.add(d)
+            break
+        print(a, b, c, o)
