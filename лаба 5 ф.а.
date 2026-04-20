@@ -1,0 +1,17 @@
+def sum_arr(arr):
+  if not arr:  # если массив пустой
+    return 0
+  return arr[0] + sum_arr(arr[1:])
+def min_arr(arr):
+  if len(arr) == 1:
+    return arr[0]
+  return min(arr[0], min_arr(arr[1:]))
+def max_arr(arr):
+  if len(arr) == 1:
+    return arr[0]
+  return max(arr[0], max_arr(arr[1:]))
+arr1 = [1, 2, 3, 4, 56]
+
+print(sum_arr(arr1))
+print(min_arr(arr1))
+print(max_arr(arr1))
