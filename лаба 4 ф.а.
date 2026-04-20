@@ -1,0 +1,14 @@
+def s(l):
+  if not l:
+  return 0
+  return l[0] + s(l[1:])
+def m(l):
+  if len(l) == 1:
+  return l[0]
+  return min(l[0], m(l[1:]))
+def mx(l):
+  if len(l) == 1:
+  return l[0]
+  return max(l[0], mx(l[1:]))
+l = [10, 3, 2, 1, 4, 5]
+print(s(l), m(l), mx(l))
